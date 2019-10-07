@@ -1,0 +1,323 @@
+<html>
+    <head>
+        {{>head}}
+    </head>
+    <body class="hold-transition skin-black-light sidebar-mini">
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a class="icon ion-navicon-round" style="
+      position: absolute;
+      left: 2rem;
+      top: 0.425rem;
+      color: #000;
+      font-size: 30px;
+      opacity: .7;"></a>
+      <a href="dashboard" class="logo">
+        <span class="logo-lg">
+          <span class="user-panel" style="padding:0px">
+            <span class="image">
+              <img src="/img/GAIA3.png" class="img-preview" alt="User Image" style="padding: 0px;max-width: 100px;">
+            </span>
+
+          </span>
+
+        </span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li>
+               <img id="noticeIcon" src="/img/notice.jpg" alt="" style="margin-top: 1.35rem;width: 20px;height: 20px;">
+            </li>
+            <!-- Messages: style can be found in dropdown.less-->
+            <li>
+                <a class="icon ion-ios-person" style="font-size: 20px; padding-right: 0.5rem"></a>
+            </li>
+            <!-- Notifications: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding: 1.5rem 1rem 1rem 0;">
+                <span class="hidden-xs">Sherry</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header" style="background-color: white">
+                  <p style="color: darkgrey">
+                    Sherry
+                    <small>I305451</small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-right">
+                    <a href="index.html" class="btn btn-default btn-flat">退出</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- Company style -->
+            <!-- Control Sidebar Toggle Button -->
+          </ul>
+        </div>
+      </nav>
+      <img id="messFromNGO" src="/img/mess-from-ngo.jpg" class="hide" style="width: 26rem;position: absolute;right: 10rem;border: 1px solid #11111121;">
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+   {{>sidebar}}
+    <div id="projectListContainer" class="projects-content-wrapper content-container">
+      <section class="filterContainer">
+        <div class="proj-fileter-container" style="height: 6rem;">
+          <label calss="filter-title">Search</label>
+          <div class="form-group">
+            <label class="form-label">Key words:</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="proj-fileter-container">
+          <div class="label-container"><label calss="filter-title">Project</label></div>
+          <div class="form-group filter-group">
+            <div class="proj-group">
+                <label class="form-label">Project Status: </label>
+                <select class="form-control select2 projec-selection">
+                    <option selected="selected">Available</option>
+                    <option >Recruiting</option>
+                    <option>In Process</option>
+                    <option>Completed</option>
+                  </select>
+            </div>
+            <div class="proj-group">
+                <label class="form-label">Theme: </label>
+                <select title='select' class="show-tick form-control projec-selection" required data-live-search="true">
+                    <option style='display: none' value=""></option>
+                    <option value="NO POVERTY">NO POVERTY</option>
+                    <option value="ZERO HUNGER">ZERO HUNGER</option>
+                    <option value="GOOD HEALTH AND WELL-BEING">GOOD HEALTH AND WELL-BEING</option>
+                    <option value="QUALITY EDUCATION">QUALITY EDUCATION</option>
+                    <option value="GENDER EQUALITY">GENDER EQUALITY</option>
+                    <option value="CLEAN WATER AND SANITATION">CLEAN WATER AND SANITATION</option>
+                    <option value="AFFORDABLEAND AND CLEANENERGY">AFFORDABLEAND AND CLEANENERGY</option>
+                    <option value="DECENT WORK AND ECONOMIC GROWTH">DECENT WORK AND ECONOMIC GROWTH</option>
+                    <option value="INDUSTRY,INNOVATION AND INFRASTRUCTURE">INDUSTRY,INNOVATION AND INFRASTRUCTURE</option>
+                    <option value="REDUCED INEQUALITLES">REDUCED INEQUALITLES</option>
+                    <option value="SUSTANINABLE CITIES AND COMMUNITIES">SUSTANINABLE CITIES AND COMMUNITIES</option>
+                    <option value="RESPONSIBLE CONSUMPTION AND PRODUCTION">RESPONSIBLE CONSUMPTION AND PRODUCTION</option>
+                    <option value="CLIMATE ACTION">CLIMATE ACTION</option>
+                    <option value="LIFE BELOW WATER">LIFE BELOW WATER</option>
+                    <option value="LIFE ON LAND">LIFE ON LAND</option>
+                    <option value="PEACE,JUSTICE AND STRONG INSTITUTIONS">PEACE,JUSTICE AND STRONG INSTITUTIONS</option>
+                    <option value="PARTNERSHIPS FOR THE GOALS">PARTNERSHIPS FOR THE GOALS</option>
+                </select>
+            </div>
+            <div class="proj-group">
+                    <label class="form-label">Budget: </label>
+                    <select title='select' class="show-tick form-control projec-selection" required data-live-search="true" style="width: 14.5rem;padding-right: 1rem">
+                        <option value="less than 40,000￥">less than 40,000￥</option>
+                        <option value="40,000-60,000￥">40,000-60,000￥</option>
+                        <option value="more than 60,000￥">more than 60,000￥</option>
+                    </select>
+                </div>
+            <div class="proj-group">
+                <label class="form-label">Location: </label>
+                <select title='select' class="show-tick form-control projec-selection" required data-live-search="true" >
+                    <option style='display: none' value=""></option>
+                    <option value="Shanghai">Shanghai</option>
+                    <option value="Beijing">Beijing</option>
+                    <option value="Guangxi">Guangxi</option>
+                    <option value="Shenzhen">Shenzhen</option>
+                    <option value="Hangzhou">Hangzhou</option>
+                    <option value="Dongguang">Dongguang</option>
+                    <option value="Nanjing">Nanjing</option>
+                    <option value="Chengdu">Chengdu</option>
+                    <option value="Xianggang">Xianggang</option>
+                    <option value="Wenzhen">Wenzhen</option>
+                </select>
+            </div>
+            <div class="proj-group">
+                <div class="time-label-container"><label class="form-label">Time: </label></div>
+                <!-- Date and time range -->
+                <div class="time-picker">
+                    <div class="input-group">
+                      <div class="input-group-addon">
+                        <i class="fa fa-clock-o"></i>
+                      </div>
+                      <input type="text" class="form-control pull-right" id="reservationtime">
+                    </div>
+                    <!-- /.input group -->
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-fileter-container">
+            <div class="label-container"><label calss="filter-title">Organization</label></div>
+            <div class="form-group filter-group">
+                <div class="proj-group">
+                    <label class="form-label">Organization Scale:</label>
+                    <select class="form-control select2 projec-selection">
+                        <option selected="selected" value="less than 10 employees">less than 10 employees</option>
+                        <option value="10-100 employees">10-100 employees</option>
+                        <option value="100-300 employees">100-300 employees</option>
+                        <option value="more than 300 employees">more than 300 employees</option>
+                    </select>
+                </div>
+                <div class="proj-group">
+                    <label class="form-label">Organization Area: </label>
+                    <select title='select' class="show-tick form-control projec-selection" required data-live-search="true">
+                        <option style='display: none' value=""></option>
+                        <option value="Children">Children</option>
+                        <option value="Education">Education</option>
+                        <option value="Women">Women</option>
+                    </select>
+                </div>
+                <div class="proj-group">
+                    <div class="time-label-container"><label class="form-label">Organization Area Founded Date: </label></div>
+                    <!-- Date and time range -->
+                    <div class="date-picker">
+                        <div class="input-group date">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" class="form-control pull-right datepickerInput" id="datepicker">
+                        </div>
+                        <!-- /.input group -->
+                    </div>
+                </div>
+                <div class="proj-buttons">
+                  <button type="button" class="btn btn-default clearBtn">Clear</button>
+                  <button type="button" class="btn btn-default filtertBtn">Filter</button>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="proj-content">
+        <div class="content-title">
+          <span>Projects(63)</span>
+        </div>
+        <div class="card-items" style="width: 92%">
+            <div class="card">
+                <a href="/projects/detail">
+                  <img class="card-img" src="/img/spring.jpg" alt="Card image" style="width:100%">
+                </a>
+                <div class="card-body">
+                  <h4 class="card-title">Spring Buds Project</h4>
+                  <p class="card-text">Location: Shanghai</p>
+                  <p class="card-text">Time: 2019.06.01 - 2019.12.30</p>
+                  <p class="card-text card-status">Status: </p><label class="card-status-available">Available</label>
+                  <div style="width:100%;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;"></div>
+                  <div class="fund-wrapper">
+                    <img src="/img/icon1.jpg" style="margin-left: 1rem">
+                    <p class="card-text card-bottom" style="margin-left: 3.5rem">China Children and Teenagers' Fund</p>
+                  </div>
+                  
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="/img/education-poor.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Cloud education to poor children</h4>
+                    <p class="card-text">Location: Shanghai</p>
+                    <p class="card-text">Time: 2019.06.01 - 2019.12.30</p>
+                    <p class="card-text card-status">Status: </p><label class="card-status-available">Available</label>
+                    <div style="width:100%;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;"></div>
+                    <div class="fund-wrapper">
+                      <img src="/img/icon2.jpg" style="margin-left: 6rem">
+                      <p class="card-text card-bottom" style="margin-left: 8.5rem">Shanshu Foundation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="/img/donating.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Develop a donating mini program</h4>
+                    <p class="card-text">Location: Shanghai</p>
+                    <p class="card-text">Time: 2019.06.01 - 2019.8.22</p>
+                    <p class="card-text card-status">Status: </p><label class="card-status-available">Available</label>
+                    <div style="width:100%;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;"></div>
+                    <div class="fund-wrapper">
+                      <img src="/img/icon3.jpg" style="margin-left: 7rem">
+                      <p class="card-text card-bottom" style="margin-left: 9.5rem">Zhonggu Charity</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="/img/school-class.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Boarding School Class</h4>
+                    <p class="card-text">Location: Beijing</p>
+                    <p class="card-text">Time: 2019.06.01 - 2019.8.18</p>
+                    <p class="card-text card-status">Status: </p><label class="card-status-available">Available</label>
+                    <div style="width:100%;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;"></div>
+                    <div class="fund-wrapper">
+                        <img src="/img/icon4.jpg" style="margin-left: 4rem">
+                        <p class="card-text card-bottom" style="margin-left: 6.5rem">Beijing Growing Foundation</p>
+                      </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="/img/friend-camp-edu.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Cloud education to poor children</h4>
+                    <p class="card-text">Location: Foshan</p>
+                    <p class="card-text">Time: 2019.06.30 - 2019.8.30</p>
+                    <p class="card-text card-status">Status: </p><label class="card-status-available">Available</label>
+                    <div style="width:100%;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;"></div>
+                    <div class="fund-wrapper">
+                      <img src="/img/icon2.jpg" style="margin-left: 6rem">
+                      <p class="card-text card-bottom" style="margin-left: 8.5rem">Shanshu Foundation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="/img/donationg-sys.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Donating system development</h4>
+                    <p class="card-text">Location: Shanghai</p>
+                    <p class="card-text">Time: 2019.06.01 - 2019.12.30</p>
+                    <p class="card-text card-status">Status: </p><label class="card-status-available">Available</label>
+                    <div style="width:100%;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;"></div>
+                    <div class="fund-wrapper">
+                      <img src="/img/icon2.jpg" style="margin-left: 6rem">
+                      <p class="card-text card-bottom" style="margin-left: 8.5rem">Shanshu Foundation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="/img/yunjiejie-program.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">"Yunjiejie" program</h4>
+                    <p class="card-text">Location: Nanjing</p>
+                    <p class="card-text">Time: 2019.08.01 - 2019.09.06</p>
+                    <p class="card-text card-status">Status: </p><label class="card-status-available">Available</label>
+                    <div style="width:100%;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;"></div>
+                    <div class="fund-wrapper">
+                      <img src="/img/icon2.jpg" style="margin-left: 6rem">
+                      <p class="card-text card-bottom" style="margin-left: 8.5rem">Shanshu Foundation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img" src="/img/I want to walk.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">"Mom I want to walk" program</h4>
+                    <p class="card-text">Location: Fuyang</p>
+                    <p class="card-text">Time: 2019.07.01 - 2019.11.06</p>
+                    <p class="card-text card-status">Status: </p><label class="card-status-available">Available</label>
+                    <div style="width:100%;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;"></div>
+                    <div class="fund-wrapper">
+                      <img src="/img/icon2.jpg" style="margin-left: 6rem">
+                      <p class="card-text card-bottom" style="margin-left: 8.5rem">Shanshu Foundation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="moreButtonWrapper" style="position: relative;height: 52px;">
+          <button class="moreBtn">More</button>
+          <div class="moreNum"><span>[8/63]</span></div>
+        </div>
+      </section>
+    </div>
+    </div>
+    </body>
+</html>

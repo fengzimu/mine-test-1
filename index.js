@@ -1,6 +1,5 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-var hbs = require('hbs');
 
 // 创建 application/x-www-form-urlencoded 编码解析
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -9,27 +8,33 @@ const fs = require('fs');
 const http = require('http');
 const https = require('https');
 const path = require('path');
+var hbs = require('hbs');
+
+
+// ssl cert
+// const credentials = {
+//     key: fs.readFileSync('./cert/private.pem', 'utf8'),
+//     cert: fs.readFileSync('./cert/client.crt', 'utf8')
+// };
+
 const app = express();
 app.use(bodyParser.json({ limit: '20mb' }));
 
-// app.set('view engine', 'hbs');
-// app.set('views', __dirname + '/views');
-
 // static files
-app.use('/', express.static('./public'));
-// app.use('/', require('./routes/home'));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', urlencodedParser, function(req, res){
-    res.sendFile( __dirname + "/" + "index.html" );
-});
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+hbs.registerPartials(__dirname + '/views/common');
+// require('./utils/hbs-helper')(hbs);
 
-app.get('/login', urlencodedParser, function(req, res){
-    res.sendFile( __dirname + "/views" + "/user/login.html" );
-});
+//routes
+app.use('/account', require('./routes/account'));
+app.use('/dashboard', require('./routes/dashboard'));
+app.use('/projects', require('./routes/projects'));
 
-//app.use('/Mercuryindex.html', express.static('./Mercuryindex.html'));
 
-app.post('/home',urlencodedParser, function (req, res) {
+app.post('/Home',urlencodedParser, function (req, res) {
     console.log(req.body["form-email"], req.body)
     var response = {
         "form-email":req.body["form-email"],
@@ -166,6 +171,7 @@ var httpServer = http.createServer(app);
 // var httpsServer = https.createServer(credentials, app);
 
 const PORT = 9000;
+// const SSLPORT = 9080;
 
 httpServer.listen(PORT, () => {
     console.log('HTTP Server is running on port %s', PORT);

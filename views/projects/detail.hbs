@@ -1,0 +1,209 @@
+<html>
+    <head>
+        {{>head}}
+    </head>
+    <body class="hold-transition skin-black-light sidebar-mini">
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a class="icon ion-navicon-round" style="
+      position: absolute;
+      left: 2rem;
+      top: 0.425rem;
+      color: #000;
+      font-size: 30px;
+      opacity: .7;"></a>
+      <a href="dashboard" class="logo">
+        <span class="logo-lg">
+          <span class="user-panel" style="padding:0px">
+            <span class="image">
+              <img src="/img/GAIA3.png" class="img-preview" alt="User Image" style="padding: 0px;max-width: 100px;">
+            </span>
+
+          </span>
+
+        </span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li>
+               <img id="noticeIcon" src="/img/notice.jpg" alt="" style="margin-top: 1.35rem;width: 20px;height: 20px;">
+            </li>
+            <!-- Messages: style can be found in dropdown.less-->
+            <li>
+                <a class="icon ion-ios-person" style="font-size: 20px; padding-right: 0.5rem"></a>
+            </li>
+            <!-- Notifications: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding: 1.5rem 1rem 1rem 0;">
+                <span class="hidden-xs">Sherry</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header" style="background-color: white">
+                  <p style="color: darkgrey">
+                    Sherry
+                    <small>I305451</small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-right">
+                    <a href="index.html" class="btn btn-default btn-flat">退出</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- Company style -->
+            <!-- Control Sidebar Toggle Button -->
+          </ul>
+        </div>
+      </nav>
+      <img id="messFromNGO" src="/img/mess-from-ngo.jpg" class="hide" style="width: 26rem;position: absolute;right: 10rem;border: 1px solid #11111121;">
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+   {{>sidebar}}
+     <div id="projectDetailContainer" class="projectdetail-content-wrapper content-container">
+      <section class="project-container" style="width: 88%;height: 1010px;">
+        <div class="project-header">
+            <div class="header-img">
+              <img src="/img/spring-without-title.jpg" style="width:100%;height: 100%;">
+            </div>
+            <div class="header-detail">
+              <label class="header-title">Spring Buds Project</label>
+              <div class="header-description">
+                <label class="header-label">Status:</label>
+                <span class="header-value status-available">Available</span>
+                <br/>
+                <label class="header-label">Budget:</label>
+                <span class="header-value">50,000¥</span>
+                <br/>
+                <label class="header-label">Theme:</label>
+                <span class="header-value">Education</span>
+                <br/>
+                <label class="header-label">Time:</label>
+                <span class="header-value">2019.06.01 - 2019.12.30</span>
+                <br/>
+                <label class="header-label">Location:</label>
+                <span class="header-value">Shanghai</span>
+                <br/>
+                <label class="header-label">Organization:</label>
+                <a href="#"><label class="header-value ngo-link">China Children and Teenagers' Fund</label></a>
+              </div>
+            </div>
+            <div id="headerAction" class="header-action">
+                <button type="button" class="btn btn-default insightBtn" 
+                onclick="showMainContent('chartContainer')">Insight</button>
+                <button type="button" class="btn btn-default addBtn" data-toggle="modal" 
+                data-target="#messageModal" onclick="addToWishList()">Add to wish list</button>
+              </div>
+            <div id="headerAction2" class="header-action-v2 hide">
+              <button type="button" class="btn btn-default applyBtn" onclick="applyProject()">Apply</button>
+              <button type="button" class="btn btn-default insightBtn"  onclick="showMainContent('chartContainer')">Insight</button>
+              <button type="button" class="btn btn-default removeBtn">Remove from wish list</button>
+            </div>
+
+            <div id="headerAction3" class="header-action-v2 hide">
+              <button type="button" class="btn btn-default insightBtn"  onclick="showMainContent('chartContainer')">Insight</button>
+            </div>
+            <ul class="tab_header_group">
+                <li class="tab-item">
+                  <div id="descPane" class="tab-text content-underline"><a href="#descSection" onclick="showPane('descPane')">Project Description</a></div>
+                </li>
+                <li class="tab-item">
+                  <div id="volPane" class="tab-text"><a href="#volunteerSection" onclick="showPane('volPane')">Volunteers</a></div>
+                </li>
+                <li class="tab-item">
+                  <div id="linkPane" class="tab-text"><a href="#linkSection" onclick="showPane('linkPane')">Related Links</a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="project-body" style="padding-bottom: 2rem;">
+            <div class="detail-content">
+              <section id="descSection" class="desc-section content-section">
+                <div class="detail-project">
+                    <label class="detail-content-title">Background</label>
+                    <div class="content-text"><p>The Spring Bud Project was launched in 1989; since then, it has undergone significant development and, more importantly,
+                      it has had immeasurable effects on the lives of many girls across China. How? With donations from people from all segments of society, 
+                      the project has helped the girls —— who had to drop out due to lack of money —— return to school. They have felt the great love of and 
+                      care shown by everyone who has donated their time and/or money to the project. The benefactors' love must never been forgotten.
+                      In 1989, the board of the China Children and Tenagers' Fund (CCTF) agreed to establish a fund with the specific purpose of paying the 
+                      tuition so impoverished girls could return to school. It was the first fund of its kind in China. In 1992, the fund, 
+                      commonly referred to as the "fund for girls' tuition," was officially named the Spring Bud Project.</p>
+                    </div>
+                    <label class="detail-content-title">Introduction</label>
+                    <div class="content-text"><p>We are finding some volunteers who are passionate about children’s education. 
+                      Volunteers will go to Guangxi and stay with under-privileged children for one weeks. During the one week, 
+                      volunteers will be their teacher to have classes. 
+                      We hope that our volunteers can bring a bigger world to the children, broaden their minds and enrich their knowledge.</p>
+                    </div>
+                    <label class="detail-content-title">Beneficiary</label>
+                    <div><p>Children in Guangxi Primary School</p></div>
+                  </div>
+              </section>
+              <section id="volunteerSection" class="volunteer-section content-section">
+                <div class="title-container">
+                  <div class="content-title">Volunteers</div>
+                </div>
+                <div class="detail-volunteers" style="padding-top: 2rem">
+                    <label class="detail-content-title">Prerequisite</label>
+                    <div>
+                      <p>Characters preferred: Passionate; Patience;</p>
+                      <p>Skills preferred: Teaching; Technology; Painting; Dancing; Music; Language</p>
+                    </div>
+                    <label class="detail-content-title">Number</label>
+                    <div>
+                      <p>30 People</p>
+                    </div>
+                </div>
+              </section>
+              <section id="linkSection" class="links-section content-section">
+                <div class="title-container">
+                    <div class="content-title">Related Links</div>
+                </div>
+                <div class="detail-links"  style="padding-top: 2rem">
+                  <label class="detail-content-title">Related Info</label>
+                  <ul>
+                    <li>
+                      <a href="http://en.cctf.org.cn/">Spring Buds Project</a>
+                      <label> -- Spring Buds Project</label>
+                    </li>
+                    <li>
+                      <a href="http://www.womenofchina.cn/womenofchina/html1/projects/project/1505/1793-1.htm">Spring Buds Blossom in China as Traveling Charity Documentary Prepares to Hit the Road</a>
+                      <label> -- All-China Women's Federation</label>
+                    </li>
+                    <li>
+                      <a href="http://world.people.com.cn/n1/2019/0614/c190970-31144388.html">Spring Buds Project Launches in Beijing</a>
+                      <label> -- People's Daily</label>
+                    </li>
+                    <li>
+                      <a href="http://news.china.com.cn/zhenxiang/2017-12/24/content_50121215.htm">Girl Breakaways from Darkness</a>
+                      <label> -- China News</label>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+        </div>
+      </section>
+        <!-- Dialog -->
+      <div id="mesDlg" class="messageToast hide">
+        <img src="/img/sucess-icon.jpg" alt="" width="30px" height="30px">
+        <span class="mes">
+            Successfully added to your wish list.
+        </span>
+      </div>
+
+      <div id="mesDlg2" class="messageToast hide" style="height: 12rem">
+        <img src="/img/sucess-icon.jpg" alt="" width="30px" height="30px" style="float: left;">
+        <div class="mes applyMes">
+            Your application is sent to the contact person of the project. Further progress will be sent to your Issue Box in a few days.
+        </div>
+      </div>
+    </div>
+    </div>
+    </body>
+</html>

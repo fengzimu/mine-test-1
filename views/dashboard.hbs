@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{>head}}
+</head>
+
+<body class="hold-transition skin-black-light sidebar-mini">
+  <div class="wrapper">
+    <header class="main-header">
+      <!-- Logo -->
+      <a class="icon ion-navicon-round" style="
+      position: absolute;
+      left: 2rem;
+      top: 0.425rem;
+      color: #000;
+      font-size: 30px;
+      opacity: .7;"></a>
+      <a href="dashboard" class="logo">
+        <span class="logo-lg">
+          <span class="user-panel" style="padding:0px">
+            <span class="image">
+              <img src="/img/GAIA3.png" class="img-preview" alt="User Image" style="padding: 0px;max-width: 100px;">
+            </span>
+
+          </span>
+
+        </span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li>
+               <img id="noticeIcon" src="/img/notice.jpg" alt="" style="margin-top: 1.35rem;width: 20px;height: 20px;">
+            </li>
+            <!-- Messages: style can be found in dropdown.less-->
+            <li>
+                <a class="icon ion-ios-person" style="font-size: 20px; padding-right: 0.5rem"></a>
+            </li>
+            <!-- Notifications: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding: 1.5rem 1rem 1rem 0;">
+                <span class="hidden-xs">Sherry</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- User image -->
+                <li class="user-header" style="background-color: white">
+                  <p style="color: darkgrey">
+                    Sherry
+                    <small>I305451</small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-right">
+                    <a href="index.html" class="btn btn-default btn-flat">退出</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- Company style -->
+            <!-- Control Sidebar Toggle Button -->
+          </ul>
+        </div>
+      </nav>
+      <img id="messFromNGO" src="/img/mess-from-ngo.jpg" class="hide" style="width: 26rem;position: absolute;right: 10rem;border: 1px solid #11111121;">
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+   {{>sidebar}}
+
+    <!-- Content Wrapper. Contains page content -->
+    <div id="dashboardContent" class="dashboard-content-wrapper content-container">
+      <!-- Main content -->
+      <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-2 col-xs-6">
+            <!-- small box -->
+            <div class="info-box">
+              <span class="info-box-icon bg-aqua"><i class="ion ion-person"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Volunteers</span>
+                <span class="info-box-number">
+                  <h3>100</h3>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-xs-6">
+            <!-- small box -->
+            <div class="info-box">
+              <span class="info-box-icon bg-red"><i class="ion ion-clock"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Total Volunteer Hours</span>
+                <span class="info-box-number">
+                  <h3>800</h3>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-xs-6">
+            <!-- small box -->
+            <div class="info-box">
+              <span class="info-box-icon bg-yellow"><i class="ion ion-clock"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Avg. Volunteer Hours</span>
+                <span class="info-box-number">
+                  <h3>800</h3>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-xs-6">
+            <!-- small box -->
+            <div class="info-box">
+              <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Project Number</span>
+                <span class="info-box-number">
+                  <h3>5</h3>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-xs-6">
+            <!-- small box -->
+            <div class="info-box">
+              <span class="info-box-icon bg-green"><i class="ion ion-ios-people-outline"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Impact People</span>
+                <span class="info-box-number">
+                  <h3>6060</h3>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <div class="overview-cards">
+            <div class="card">
+              <a href="#" onclick="onShowProjectDetail()">
+                <img class="card-img" src="/img/volunteer-number.jpg" alt="Card image" style="width:100%">
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" onclick="onShowProjectDetail()">
+                <img class="card-img" src="/img/volunteer-hour.jpg" alt="Card image" style="width:100%">
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" onclick="onShowProjectDetail()">
+                <img class="card-img" src="/img/project-number.jpg" alt="Card image" style="width:100%">
+              </a>
+            </div>
+            <div class="card">
+              <a href="#" onclick="onShowProjectDetail()">
+                <img class="card-img" src="/img/theme.jpg" alt="Card image" style="width:100%">
+              </a>
+            </div>
+        </div>
+      </section>
+      <!-- /.content -->
+    </div>
+  </div>
+
+</body>
+
+</html>
